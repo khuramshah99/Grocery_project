@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirm delete</title>
+</head>
+<body>
+    <h1>Delete Product</h1>
+    <p>Are you sure you want to delete "{{ product.name }}"?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Delete</button>
+        <a href="{% url 'products:product-list' %}">Cancel</a>
+    </form>
+</body>
+</html>
+Remember to place these template files in the templates/products/ directory within your app's directory structure, so Django can locate and use them. Also, these are simplified examples, and you might want to add more styling, validation, error handling, and other features based on your app's requirements.
+
+
+
+
+
+
+</html>
